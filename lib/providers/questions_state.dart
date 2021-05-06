@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 
 import 'package:quiz_app/models/question.dart';
 import 'package:quiz_app/screens/score/score_screen.dart';
-import 'package:quiz_app/services/database_servise.dart';
+import 'package:quiz_app/services/database_service.dart';
 
 class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
   final _dbService = DBService();

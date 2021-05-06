@@ -65,7 +65,7 @@ class Option extends StatelessWidget {
                     child: getTheRightColor() == kGrayColor
                         ? null
                         : Icon(getTheRightIcon(), size: 1),
-                  )
+                  ),
                 ],
               ),
             ),

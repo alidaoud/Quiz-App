@@ -20,7 +20,7 @@ class DBService {
     List<Question> questions;
     await _dbRef
         .collection(_COL_QUESTIONS)
-        .where("id", isGreaterThan: randomNumber)
+        .where("id", isGreaterThanOrEqualTo: randomNumber)
         .get()
         .then((value) => questions = questionsFromSnapshot(value));
     return questions;

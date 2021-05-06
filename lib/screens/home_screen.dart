@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "Enter your informations below",
+                    "Enter your information below",
                     style: TextStyle(
                       color: Colors.white,
                     ),
@@ -80,7 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 isLoading = false;
                                 Get.snackbar(
                                   "Error !",
-                                  "an error occured while fetching questions",
+                                  "an error occurred while fetching questions",
                                   snackPosition: SnackPosition.BOTTOM,
                                 );
                               });

@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/providers/questions_state.dart';
-import 'package:quiz_app/screens/home_screen.dart';
 
 class ScoreScreen extends StatelessWidget {
   static const ROUTE_NAME = "ScoreScreen";

@@ -14,8 +14,8 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // So that we have acccess our controller
-    QuestionsState _questionController = Get.put(QuestionsState());
+    // So that we have access our controller
+    final _questionController = Get.put(QuestionsState());
 
     return WillPopScope(
       onWillPop: () => _questionController.reset(),
