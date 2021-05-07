@@ -8,6 +8,7 @@ import 'package:quiz_app/services/database_service.dart';
 class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
   final _dbService = DBService();
 
+  final focusNode = FocusNode();
   AnimationController _animationController;
   Animation _animation;
   Animation get animation => this._animation;
@@ -50,12 +51,6 @@ class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
   String get userName => this._userName;
   set userName(String name) {
     this._userName = name;
-  }
-
-  FocusNode _focusNode;
-  FocusNode get focusNode => this._focusNode;
-  set focusNode(FocusNode node) {
-    this._focusNode = node;
   }
 
   @override
@@ -137,7 +132,7 @@ class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
     _selectedAns = 0;
     _userName = "";
     textController.text = "";
-    _focusNode.unfocus();
+    focusNode.unfocus();
     _animationController.reset();
     return true;
   }
