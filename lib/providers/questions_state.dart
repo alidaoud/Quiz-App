@@ -7,9 +7,9 @@ import 'package:quiz_app/services/database_service.dart';
 
 class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
   final _dbService = DBService();
+
   AnimationController _animationController;
   Animation _animation;
-
   Animation get animation => this._animation;
 
   PageController _pageController;
@@ -52,10 +52,16 @@ class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
     this._userName = name;
   }
 
+  FocusNode _focusNode;
+  FocusNode get focusNode => this._focusNode;
+  set focusNode(FocusNode node) {
+    this._focusNode = node;
+  }
+
   @override
   void onInit() async {
     _animationController =
-        AnimationController(duration: Duration(seconds: 60), vsync: this);
+        AnimationController(duration: Duration(seconds: 15), vsync: this);
     _animation = Tween<double>(begin: 0, end: 1).animate(_animationController)
       ..addListener(() {
         // update like setState
@@ -93,7 +99,7 @@ class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
     _animationController.stop();
     update();
 
-    // Once user select an ans after 3s it will go to the next qn
+    // Once user select an ans after 1s it will go to the next qn
     Future.delayed(Duration(seconds: 1), () {
       nextQuestion();
     });
@@ -131,6 +137,7 @@ class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
     _selectedAns = 0;
     _userName = "";
     textController.text = "";
+    _focusNode.unfocus();
     _animationController.reset();
     return true;
   }

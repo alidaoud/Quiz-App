@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/providers/questions_state.dart';
@@ -16,7 +15,7 @@ class ScoreScreen extends StatelessWidget {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          SvgPicture.asset("assets/images/bg.svg", fit: BoxFit.fill),
+          Image.asset(IMG_BG, fit: BoxFit.cover),
           Column(
             children: [
               Spacer(flex: 3),
@@ -31,7 +30,7 @@ class ScoreScreen extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .headline5
-                    .copyWith(color: kSecondaryColor),
+                    .copyWith(color: Colors.white),
               ),
               Spacer(),
               Text(
@@ -39,7 +38,7 @@ class ScoreScreen extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .headline3
-                    .copyWith(color: kSecondaryColor),
+                    .copyWith(color: Colors.white),
               ),
               Spacer(),
               Text(
@@ -47,7 +46,7 @@ class ScoreScreen extends StatelessWidget {
                 style: Theme.of(context)
                     .textTheme
                     .headline4
-                    .copyWith(color: kSecondaryColor),
+                    .copyWith(color: Colors.white),
               ),
               Spacer(),
               InkWell(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/constants.dart';
 import 'package:quiz_app/providers/questions_state.dart';
@@ -28,9 +27,9 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Stack(
         fit: StackFit.expand,
         children: [
-          SvgPicture.asset(
-            "assets/images/bg.svg",
-            fit: BoxFit.fill,
+          Image.asset(
+            IMG_BG,
+            fit: BoxFit.cover,
           ),
           SafeArea(
             child: Padding(
@@ -53,10 +52,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   Spacer(), // 1/6
                   TextField(
                     controller: _qState.textController,
+                    focusNode: _qState.focusNode,
                     onChanged: (val) => _qState.userName = val,
                     decoration: InputDecoration(
                       filled: true,
-                      fillColor: Color(0xFF1C2341),
+                      fillColor: Colors.grey,
                       hintText: "Full Name",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(12)),

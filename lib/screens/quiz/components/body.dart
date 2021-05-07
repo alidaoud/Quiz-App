@@ -22,7 +22,7 @@ class Body extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          SvgPicture.asset("assets/images/bg.svg", fit: BoxFit.fill),
+          Image.asset(IMG_BG, fit: BoxFit.cover),
           SafeArea(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,14 +44,14 @@ class Body extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .headline4
-                            .copyWith(color: kSecondaryColor),
+                            .copyWith(color: Colors.white),
                         children: [
                           TextSpan(
                             text: "/${_questionController.questions.length}",
                             style: Theme.of(context)
                                 .textTheme
                                 .headline5
-                                .copyWith(color: kSecondaryColor),
+                                .copyWith(color: Colors.white),
                           ),
                         ],
                       ),
