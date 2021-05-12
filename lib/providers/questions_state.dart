@@ -64,7 +64,7 @@ class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
       });
 
     // start our animation
-    // Once 60s is completed go to the next qn
+    // Once 15s is completed go to the next qn
     _animationController.forward().whenComplete(nextQuestion);
     _pageController = PageController();
     super.onInit();
