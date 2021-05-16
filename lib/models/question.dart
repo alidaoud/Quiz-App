@@ -26,7 +26,7 @@ class Question {
 
   factory Question.fromJson(Map<String, dynamic> json) => Question(
         id: json["id"],
-        answerIndex: json["answer_index"],
+        answerIndex: json["answer_id"],
         question: json["question"],
         options: List<String>.from(json["options"].map((x) => x)),
       );
