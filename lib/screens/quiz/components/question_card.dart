@@ -34,14 +34,25 @@ class QuestionCard extends StatelessWidget {
                 .copyWith(color: kBlackColor),
           ),
           SizedBox(height: kDefaultPadding / 2),
-          ...List.generate(
-            question.options.length,
-            (index) => Option(
-              index: index,
-              text: question.options[index],
-              press: () => _qState.checkAns(question, index),
-            ),
+          Expanded(
+            child: ListView.builder(
+                itemCount: question.options.length,
+                itemBuilder: (ctx, index) {
+                  return Option(
+                    index: index,
+                    text: question.options[index],
+                    press: () => _qState.checkAns(question, index),
+                  );
+                }),
           ),
+          // ...List.generate(
+          //   question.options.length,
+          //   (index) => Option(
+          //     index: index,
+          //     text: question.options[index],
+          //     press: () => _qState.checkAns(question, index),
+          //   ),
+          // ),
         ],
       ),
     );

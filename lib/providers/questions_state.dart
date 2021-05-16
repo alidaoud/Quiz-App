@@ -59,12 +59,9 @@ class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
         AnimationController(duration: Duration(seconds: 15), vsync: this);
     _animation = Tween<double>(begin: 0, end: 1).animate(_animationController)
       ..addListener(() {
-        // update like setState
-        update();
+        update(); //notify listeners
       });
 
-    // start our animation
-    // Once 60s is completed go to the next qn
     _animationController.forward().whenComplete(nextQuestion);
     _pageController = PageController();
     super.onInit();
@@ -94,7 +91,6 @@ class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
     _animationController.stop();
     update();
 
-    // Once user select an ans after 1s it will go to the next qn
     Future.delayed(Duration(seconds: 1), () {
       nextQuestion();
     });
@@ -110,10 +106,8 @@ class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
       _animationController.reset();
 
       // Then start it again
-      // Once timer is finish go to the next qn
       _animationController.forward().whenComplete(nextQuestion);
     } else {
-      // Get package provide us simple way to naviigate another page
       Get.offAndToNamed(ScoreScreen.ROUTE_NAME);
     }
   }
@@ -122,7 +116,7 @@ class QuestionsState extends GetxController with SingleGetTickerProviderMixin {
     _questionNumber.value = index + 1;
   }
 
-  //reset all values the to start point
+  //reset all values to the start point
   //triggred on quiz screen poped
   Future<bool> reset() async {
     _isAnswered = false;

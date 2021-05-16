@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.devaliandro.quizapp">
+    package="com.internship.quizapp">
    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="Quiz App"

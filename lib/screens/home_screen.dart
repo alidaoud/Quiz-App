@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   Text(
-                    "Enter your information below",
+                    "Enter your name below",
                     style: TextStyle(
                       color: Colors.white,
                     ),
@@ -103,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: _isLoading
                           ? CircularProgressIndicator()
                           : Text(
-                              "Lets Start Quiz",
+                              "Start Quiz",
                               style: Theme.of(context)
                                   .textTheme
                                   .button

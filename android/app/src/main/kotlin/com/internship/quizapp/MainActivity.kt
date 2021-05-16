@@ -1,4 +1,4 @@
-package com.devaliandro.quizapp
+package com.internship.quizapp
 
 import io.flutter.embedding.android.FlutterActivity
 
