@@ -54,6 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     controller: _qState.textController,
                     focusNode: _qState.focusNode,
                     onChanged: (val) => _qState.userName = val,
+                    cursorColor: Colors.white,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey,
