@@ -1,16 +1,13 @@
-# quiz_app
+# Quiz App
 
-A new Flutter project.
+Forked and modified from [Quiz-App-Flutter](https://github.com/alidaoud/Quiz-App-Flutter)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This is a custom version of [Quiz-App-Flutter](https://github.com/alidaoud/Quiz-App-Flutter) where firebase has been integrated so we have a questions pool which provides a set of random questions from the server in each different quiz.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Pakages used in this project:
+- get
+- firebase_core
+- cloud_firestore
+- flutter_svg
